@@ -9,9 +9,11 @@ import time
 import telegram
 from telegram.ext import Updater, CommandHandler, CallbackQueryHandler
 import logging
-logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-                     level=logging.INFO)
-
+logging.basicConfig(
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    level=logging.INFO
+)
+logger = logging.getLogger(__name__)
 
 
 DataDict = Dict[str, Any]
@@ -93,17 +95,6 @@ def get_posts() -> List[Post]:
     return posts
 
 
-
-def get_keyboard():
-    keyboard = [
-        [
-            telegram.InlineKeyboardButton("LIKE", callback_data='like:0'),
-            telegram.InlineKeyboardButton("DISLIKE", callback_data='dislike:0')
-        ]
-    ]
-    return telegram.InlineKeyboardMarkup(keyboard)
-
-
 def send_post(post: Post):
     bot.send_message(
         chat_id='@seblogspoligon',
@@ -117,33 +108,12 @@ def send_post(post: Post):
     )
 
 def send_posts(posts: List[Post]):
+    logger.info(f'Send {len(posts)} posts')
     for post in posts:
         send_post(post)
-        
 
-
-def button(update, context):
-    query = update.callback_query
-    message = query.message
-    print(query.data)
-    result = bot.edit_message_text(
-        message_id=message.message_id,
-        chat_id=message.chat.id,
-        text=message.text,
-        disable_web_page_preview=True,
-        parse_mode=telegram.ParseMode.MARKDOWN,
-        reply_markup=get_keyboard(),
-    )
-    print(result)
 
 
 if __name__ == '__main__':
     updater = Updater(token=TELEGRAM_BOT_TOKEN, use_context=True)
-    updater.dispatcher.add_handler(CallbackQueryHandler(button))
     send_posts(get_posts())
-    # Start the Bot
-    updater.start_polling()
-
-    # Run the bot until the user presses Ctrl-C or the process receives SIGINT,
-    # SIGTERM or SIGABRT
-    updater.idle()
