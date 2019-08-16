@@ -9,6 +9,11 @@ import time
 import telegram
 from telegram.ext import Updater, CommandHandler, CallbackQueryHandler
 import logging
+from apscheduler.schedulers.blocking import BlockingScheduler
+from apscheduler.jobstores.sqlalchemy import SQLAlchemyJobStore
+import os
+
+
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     level=logging.INFO
@@ -24,7 +29,12 @@ URLS = [
     'https://www.confluent.io/feed/'
 ]
 TELEGRAM_BOT_TOKEN = '735569833:AAE13xW8zjMKlABMp6UGeTVpDs7ZKnxUjcY'
+DATABASE_URL = os.environ['DATABASE_URL']
+
 bot = telegram.Bot(token=TELEGRAM_BOT_TOKEN)
+scheduler = BlockingScheduler({
+    'default': SQLAlchemyJobStore(url=DATABASE_URL),
+})
 
 
 def get_text_from_html(html: str):
@@ -103,7 +113,6 @@ def send_post(post: Post):
             f'{post.summary}'
         ),
         parse_mode=telegram.ParseMode.MARKDOWN,
-        reply_markup=get_keyboard(),
         disable_web_page_preview=True,
     )
 
@@ -112,8 +121,11 @@ def send_posts(posts: List[Post]):
     for post in posts:
         send_post(post)
 
+@scheduler.scheduled_job('interval', minutes=3)
+def main():
+    posts = get_posts()
+    send_posts(posts)
 
 
 if __name__ == '__main__':
-    updater = Updater(token=TELEGRAM_BOT_TOKEN, use_context=True)
-    send_posts(get_posts())
+    scheduler.start()
