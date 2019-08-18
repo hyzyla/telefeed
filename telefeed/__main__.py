@@ -199,8 +199,8 @@ def send_posts(posts: List[Post]):
         send_post(text)
 
 
-@scheduler.scheduled_job('interval', seconds=20)
-# @scheduler.scheduled_job('cron', hour=8)
+# @scheduler.scheduled_job('interval', seconds=20)
+@scheduler.scheduled_job('cron', hour=8)
 def main():
     posts = get_posts()
     send_posts(posts)
