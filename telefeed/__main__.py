@@ -12,22 +12,39 @@ import logging
 from apscheduler.schedulers.blocking import BlockingScheduler
 from apscheduler.jobstores.sqlalchemy import SQLAlchemyJobStore
 import os
+import textwrap
 
 
 logging.basicConfig(
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    level=logging.INFO
+    format='%(asctime)s|%(levelname)s|%(message)s',
+    level=logging.INFO,
 )
 logger = logging.getLogger(__name__)
 
 
 DataDict = Dict[str, Any]
 
-URLS = [
-    'https://eng.uber.com/feed/',
-    'https://medium.com/feed/airbnb-engineering',
-    'https://www.confluent.io/feed/'
-]
+URLS = set([
+    ('Uber', 'https://eng.uber.com/feed/'),
+    ('Airbnb', 'https://medium.com/feed/airbnb-engineering'),
+    ('500px', 'https://developers.500px.com/feed'),
+    ('Confluent', 'https://www.confluent.io/feed'),
+    ('8th Light', 'https://8thlight.com/blog/feed/rss.xml'),
+    ('AdRoll', 'http://tech.adroll.com/feed.xml'),
+    ('Addepar', 'https://www.confluent.io/feed'),
+    ('Build@Addepar', 'https://medium.com/feed/build-addepar'),
+    ('Affinity', 'https://build.affinity.co/feed'),
+    ('Airbrake', 'https://airbrake.io/blog/feed'),
+    ('Advanced Web Machinery', 'https://advancedweb.hu/rss.xml'),
+    ('Airtame', 'https://airtame.engineering/feed'),
+    ('Algolia', 'https://blog.algolia.com/feed/'),
+    ('Allegro Group', 'https://allegro.tech/feed.xml'),
+    ('AppNexus', 'https://techblog.appnexus.com/feed'),
+    ('Arkency', 'https://blog.arkency.com/atom.xml'),
+    ('Artsy', 'https://artsy.github.io/feed'),
+    ('Auth0', 'https://auth0.com/blog/rss.xml'),
+    ('Avenue Code', 'https://blog.avenuecode.com/rss.xml'),
+])
 TELEGRAM_BOT_TOKEN = '735569833:AAE13xW8zjMKlABMp6UGeTVpDs7ZKnxUjcY'
 DATABASE_URL = os.environ['DATABASE_URL']
 
@@ -62,18 +79,42 @@ def time_struct_to_datetime(struct: time.struct_time) -> dataclass:
 
 @dataclass
 class Post:
+    name: str
     title: str
     link: str
     summary: str
     date_published: datetime
 
+    def get_markdown(self):
+        summary = self.summary
+        summary = summary.split('...')[0]
+        summary = summary.split('…')[0]
 
-def parse_post(item: FeedDict) -> Optional[Post]:
+        return (
+            f'*[{self.name}]*\n'
+            f'[{self.title}]({self.link}) \n'
+            f'{self.summary}'
+         )
+
+
+def parse_post(name: str, item: FeedDict) -> Optional[Post]:
 
     date_published = time_struct_to_datetime(item.published_parsed)
     content = get_text_from_html(item.summary)
+    content = textwrap.shorten(content, width=300, placeholder="...")
+    content = (
+        content
+        .replace('_', '')
+        .replace('*', '')
+        .replace('`', '')
+        .replace('[', '')
+        .replace(']', '')
+        .replace('(', '')
+        .replace(')', '')
+    )
 
     return Post(
+        name=name,
         title=item.title,
         link=item.link,
         summary=content,
@@ -81,13 +122,13 @@ def parse_post(item: FeedDict) -> Optional[Post]:
     )
 
 
-def get_posts_by_urls(url: str) -> List[Post]:
+def get_posts_by_urls(name: str, url: str) -> List[Post]:
     feed = feedparser.parse(url)
     yesterday = datetime.today() - timedelta(days=4)
 
     posts = []
     for item in feed.entries:
-        post = parse_post(item)
+        post = parse_post(name, item)
 
         if post.date_published.date() == yesterday.date():
             posts.append(post)
@@ -100,32 +141,70 @@ def get_posts_by_urls(url: str) -> List[Post]:
 
 def get_posts() -> List[Post]:
     posts = []
-    for url in URLS:
-        posts.extend(get_posts_by_urls(url))
+    for name, url in URLS:
+        try:
+            parsed_posts = get_posts_by_urls(name, url)
+        except Exception as exception:
+            logger.exception(
+                msg='Cannot get post by url',
+                extra={
+                    'url': url,
+                    'name': name,
+                    'exception': exception
+                },
+            )
+            continue
+
+        logger.info(
+            msg='New posts by url',
+            extra={
+                'url': url,
+                'company_name': name,
+                'posts': len(parsed_posts),
+            }
+        )
+        posts.extend(parsed_posts)
+
     return posts
 
 
-def send_post(post: Post):
+def send_post(text: str):
+
     bot.send_message(
         chat_id='@seblogspoligon',
-        text=(
-            f'[{post.title}]({post.link}) \n'
-            f'{post.summary}'
-        ),
+        text=text,
         parse_mode=telegram.ParseMode.MARKDOWN,
         disable_web_page_preview=True,
     )
 
 def send_posts(posts: List[Post]):
     logger.info(f'Send {len(posts)} posts')
+    text = ''
     for post in posts:
-        send_post(post)
+        markdown = post.get_markdown()
+        if len(markdown) >= 4096:
+            logger.exception(
+                msg='Message too long',
+                extra={'message': mardown}
+            )
+            continue
 
-@scheduler.scheduled_job('cron', hour=8)
+        if len(text + markdown) < 4000:
+            text =  f'{text}\n\n{markdown}'
+        else:
+            send_post(text)
+            text = markdown
+
+    if text:
+        send_post(text)
+
+
+@scheduler.scheduled_job('interval', seconds=20)
+# @scheduler.scheduled_job('cron', hour=8)
 def main():
     posts = get_posts()
     send_posts(posts)
 
 
 if __name__ == '__main__':
-    scheduler.start()
+   scheduler.start()
