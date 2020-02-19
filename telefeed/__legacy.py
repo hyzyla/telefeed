@@ -177,6 +177,7 @@ def send_post(text: str):
         disable_web_page_preview=True,
     )
 
+
 def send_posts(posts: List[Post]):
     logger.info(f'Send {len(posts)} posts')
     text = ''
@@ -185,7 +186,7 @@ def send_posts(posts: List[Post]):
         if len(markdown) >= 4096:
             logger.exception(
                 msg='Message too long',
-                extra={'message': mardown}
+                extra={'message': markdown}
             )
             continue
 
