@@ -65,6 +65,8 @@ def send_to_channels():
     for channel in channels:
         # Get new posts
         posts = select_pending_posts(channel.id)
+        if not posts:
+            continue
 
         # actual sent messages to telegram
         telegram.send_posts(channel, posts)
