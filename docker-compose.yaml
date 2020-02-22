@@ -7,8 +7,6 @@ services:
     environment: &app-environment
       DATABASE_URL: postgres://admin:admin@db/bot
       TELEGRAM_TOKEN: 1021444847:AAEBxfuanz8RSshZTR6ke2czcKApan1Yp6M
-      HEROKU_APP_NAME: app
-      HEROKU_DOMAIN: localhost
       SECRET_KEY: secret
       FLASK_APP: app:app
       FLASK_DEBUG: "1"
