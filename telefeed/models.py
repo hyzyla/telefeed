@@ -59,3 +59,26 @@ class Feed(db.Model):
 
     def __repr__(self):
         return self.name
+
+
+class Channel(db.Model):
+    __tablename__ = 'channels'
+
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.Text, nullable=False)
+    feeds = db.relationship('Feed', secondary='channel_feeds')
+
+    date_cursor = db.Column(db.DateTime, nullable=True)
+
+    def __repr__(self):
+        return self.name
+
+
+class ChannelFeeds(db.Model):
+    __tablename__ = 'channel_feeds'
+
+    id = db.Column(db.Integer, primary_key=True)
+    feed_id = db.Column(db.Integer, db.ForeignKey('feeds.id'), nullable=False)
+    channel_id = db.Column(db.Integer, db.ForeignKey('channels.id'), nullable=False)
+
+    date_cursor = db.Column(db.DateTime, nullable=True)

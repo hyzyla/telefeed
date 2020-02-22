@@ -1,4 +1,4 @@
-
+import logging
 
 import celery
 import os
@@ -6,11 +6,13 @@ import os
 import click
 from flask.cli import AppGroup
 
-from . import app as flask_app, db
-from .models import Feed
+from . import app, db
+from .models import Feed, Channel
+from . import telegram
 from . import parser
+from .templates.db import select_feeds, select_channels, select_pending_posts, delete_old_posts
 
-
+logger = logging.getLogger(__name__)
 FEED_PARSE_LIMIT = 1
 
 
@@ -22,18 +24,18 @@ class ContextTask(celery.Task):
 
 celery.Task = ContextTask
 
-app = celery.Celery('example')
-app.conf.update(
+worker = celery.Celery('example')
+worker.conf.update(
     BROKER_URL=os.environ['REDIS_URL'],
     CELERY_RESULT_BACKEND=os.environ['REDIS_URL'],
     CELERY_TASK_SERIALIZER="json",
 )
 
 
-@app.task
+@worker.task
 def parse_feeds(offset: int = 0):
-    # TODO: add logging
-    feeds = Feed.query.limit(FEED_PARSE_LIMIT).offset(FEED_PARSE_LIMIT * offset).all()
+    logger.info('Feed parsing started')
+    feeds = select_feeds(offset, limit=FEED_PARSE_LIMIT)
     if not feeds:
         return
 
@@ -41,7 +43,6 @@ def parse_feeds(offset: int = 0):
         posts = []
         # Get list of posts for every feed
         for post in parser.get_posts(feed):
-
             # Select only post that is newer than last parsed
             # post in feed (feed cursor)
             if not feed.date_cursor or post.date > feed.date_cursor:
@@ -58,7 +59,27 @@ def parse_feeds(offset: int = 0):
     parse_feeds.delay(offset + 1)
 
 
-# Define cli for running tasks
+@worker.task
+def send_to_channels():
+    channels = select_channels()
+    for channel in channels:
+        # Get new posts
+        posts = select_pending_posts(channel.id)
+
+        # actual sent messages to telegram
+        telegram.send_posts(channel, posts)
+
+        # Update date cursor
+        channel.date_cursor = max(post.date for post in posts)
+        db.session.commit()
+
+
+@worker.task
+def cleanup_posts():
+    delete_old_posts()
+
+
+# Define cli for tasks
 tasks_group = AppGroup('tasks')
 
 
@@ -67,7 +88,7 @@ tasks_group = AppGroup('tasks')
 @click.argument('args', nargs=-1)
 def run_async(func, args):
     name = f'telefeed.tasks.{func}'
-    app.tasks[name].delay(*args)
+    worker.tasks[name].delay(*args)
 
 
-flask_app.cli.add_command(tasks_group)
+app.cli.add_command(tasks_group)

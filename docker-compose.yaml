@@ -2,11 +2,11 @@ version: '3'
 
 services:
 
-  web:
+  app:
     tty: true
     environment: &app-environment
       DATABASE_URL: postgres://admin:admin@db/bot
-      TELEGRAM_TOKEN: 1052863187:AAEdzk4b7VCnQjpdATtzDkvl4rjTA8n8Nrk
+      TELEGRAM_TOKEN: 1021444847:AAEBxfuanz8RSshZTR6ke2czcKApan1Yp6M
       HEROKU_APP_NAME: app
       HEROKU_DOMAIN: localhost
       SECRET_KEY: secret
@@ -25,7 +25,7 @@ services:
     image: bot-web
     ports: ["5000:5000"]
     volumes: ['.:/work']
-    depends_on: ["db"]
+    depends_on: [db, worker, redis]
     entrypoint: flask
     command: run --host 0.0.0.0
 
@@ -37,7 +37,7 @@ services:
     image: bot-worker
     volumes: ['.:/work']
     depends_on: ["db", "redis"]
-    entrypoint: watchmedo auto-restart --pattern=*.py --recursive -- celery worker --app=telefeed.tasks.app
+    entrypoint: watchmedo auto-restart --pattern=*.py --recursive -- celery worker --app=telefeed.tasks.worker
 
   db:
     image: postgres
@@ -51,4 +51,5 @@ services:
 
   redis:
     image: redis
+    ports: ["6379:6379"]
     hostname: redis
