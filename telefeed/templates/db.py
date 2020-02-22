@@ -10,9 +10,9 @@ from telefeed.models import Feed, Channel, Post, ChannelFeeds
 def select_feeds(offset: int, limit: int) -> List[Feed]:
     return (
         Feed.query
+            .order_by(Feed.id)
             .limit(limit)
             .offset(limit * offset)
-            .order(Feed.id)
             .all()
     )
 
