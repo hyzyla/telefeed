@@ -191,7 +191,7 @@ def send_posts(posts: List[Post]):
             continue
 
         if len(text + markdown) < 4000:
-            text =  f'{text}\n\n{markdown}'
+            text = f'{text}\n\n{markdown}'
         else:
             send_post(text)
             text = markdown

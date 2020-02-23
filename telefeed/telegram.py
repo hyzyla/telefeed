@@ -10,12 +10,15 @@ bot = telegram.Bot(token=os.getenv('TELEGRAM_TOKEN'))
 
 
 def _send_message(channel: Channel, text: str) -> None:
-    bot.send_message(
-        chat_id=f'@{channel.name}',
-        text=text,
-        parse_mode=telegram.ParseMode.MARKDOWN,
-        disable_web_page_preview=True,
-    )
+    try:
+        bot.send_message(
+            chat_id=f'@{channel.name}',
+            text=text,
+            parse_mode=telegram.ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
+        )
+    except Exception as exc:
+        print(exc)
 
 
 def _post_markdown(post: Post) -> str:
