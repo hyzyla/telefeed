@@ -1,0 +1,628 @@
+500px,https://developers.500px.com/feed
+8th Light,https://8thlight.com/blog/feed/atom.xml
+99designs,https://99designs.com/tech-blog/feed.xml
+AdRoll,http://tech.adroll.com/feed.xml
+Addepar,https://medium.com/feed/build-addepar
+Affinity,https://build.affinity.co/feed
+Airbrake,https://airbrake.io/blog/feed
+AirPair,https://www.airpair.com/rss
+Advanced Web Machinery,https://advancedweb.hu/atom.xml
+Airbnb,https://medium.com/feed/airbnb-engineering
+Airtame,https://airtame.engineering/feed
+Algolia,https://blog.algolia.com/feed/
+Allegro.tech,https://allegro.tech/feed.xml
+Appnexus,https://techblog.appnexus.com/feed
+Arkency,http://blog.arkency.com/atom.xml
+Artsy,http://artsy.github.io/feed
+Asana,https://blog.asana.com/feed/
+Atlassian,https://developer.atlassian.com/blog/feed.xml
+Atomic Object,https://spin.atomicobject.com/feed/
+Auth0,https://auth0.com/blog/rss.xml
+Avenue Code,http://blog.avenuecode.com/rss.xml
+AWS,https://aws.amazon.com/blogs/aws/feed/
+Azavea,https://www.azavea.com/blog/category/software-development/rss
+Babbel,https://blog.babbel.com/en/feed/
+Backtrace,https://backtrace.io/feed/
+Badoo,https://techblog.badoo.com/feed.xml
+Bandcamp,https://bandcamptech.wordpress.com/feed/
+Base Lab,https://lab.getbase.com/feed/
+Bazaarvoice,https://blog.developer.bazaarvoice.com/feed/
+BBC,https://medium.com/feed/bbc-design-engineering
+Benchling,https://benchling.engineering/feed
+BenefitFocus,https://www.benefitfocus.com/rss.xml
+Bigcommerce,https://www.bigeng.io/rss/
+Binary Studio,https://binary-studio.com/blog/rss
+Bitly,https://word.bitly.com/rss
+BitTorrent,https://engineering.bittorrent.com/feed/
+BlaBlaCar,https://medium.com/feed/blablacar-tech
+BlackRock,http://rockthecode.io/feed/
+Blender,https://code.blender.org/rss
+Blogfoster,http://engineering.blogfoster.com/rss/
+Boxever,https://www.boxever.com/feed/
+Brandwatch,https://engineering.brandwatch.com/rss/
+Buzzfeed,https://tech.buzzfeed.com/feed
+Canva,https://product.canva.com/feed.xml
+Capgemini,https://capgemini.github.io/feed.xml
+CenturyLink,https://www.ctl.io/developers/blog/rss
+Cerner,http://engineering.cerner.com/atom.xml
+Chaps,https://blog.chaps.io/feed.xml
+Chartbeat,http://engineering.chartbeat.com/feed/
+Chef,https://blog.chef.io/rss
+Clever,https://engineering.clever.com/rss
+CleverTap,https://clevertap.com/blog/tag/engineering/feed/
+CloudBees,https://www.previous.cloudbees.com/blog.xml
+Cloudera,https://blog.cloudera.com/feed/
+Cloudflare,https://blog.cloudflare.com/rss/
+CockroachDB,https://www.cockroachlabs.com/blog/index.xml
+Code Better,http://feeds.feedburner.com/CodeBetter
+Codelitt,https://www.codelitt.com/blog/rss
+Codemancers,https://crypt.codemancers.com/index.xml
+Codementor,https://www.codementor.io/tutorial/feed
+CodeName One,http://www.codenameone.com/feed.xml
+Codeship,http://blog.codeship.com/feed/
+Coinbase,https://engineering.coinbase.com/feed
+Collective Idea,https://collectiveidea.com/blog/feed/
+Commercetools,https://techblog.commercetools.com/feed
+Condé Nast,https://technology.condenast.com/feed/rss
+Confluent,https://www.confluent.io/feed/
+Convox,https://convox.com/blog/rss.xml
+Coolblue,https://devblog.coolblue.nl/feed/
+Criteo,https://medium.com/feed/criteo-labs
+Crowdfire,https://crowdfire.engineering/feed
+CSC - IT Center For Science - Cloud Team,https://cloud.blog.csc.fi/feeds/posts/default
+Curalate,http://engineering.curalate.com/feed.xml
+Data Artisans,https://data-artisans.com/feed
+Databricks,https://databricks.com/feed
+DataFox,https://eng.datafox.com/feed.xml
+Deezer,https://deezer.io/feed
+DeferPanic,https://deferpanic.com/blog/index.xml/
+Deliveroo,http://deliveroo.engineering/feed.xml
+DigitalOcean,https://blog.digitalocean.com/rss/
+Discord,https://blog.discordapp.com/feed
+Docker,https://blog.docker.com/feed/
+Docker Engineering,https://engineering.docker.com/feed/
+DoorDash,https://medium.com/feed/doordash-blog/tagged/engineering
+Doximity,https://engineering.doximity.com/feed
+Drivy,https://drivy.engineering/feed.xml
+Dropbox,https://blogs.dropbox.com/tech/feed/
+Ebay,https://www.ebayinc.com/stories/blogs/tech/rss/ 
+eFounders,https://medium.com/feed/unexpected-token
+Eharmony,https://www.eharmony.com/engineering/feed/
+Elastic,https://www.elastic.co/blog/feed
+Engine Yard,https://blog.engineyard.com/feed.xml
+Entelo,https://sourcecode.entelo.com/feed.xml
+Envato,https://webuild.envato.com/atom.xml
+Envoy,https://envoy.engineering/feed
+Erlang Solutions,https://www.erlang-solutions.com/news.rss
+Etsy,https://codeascraft.com/feed/
+Eventbrite,https://www.eventbrite.com/engineering/feed/
+Evernote,https://evernote.com/blog/feed/
+Evil Martians,https://evilmartians.com/chronicles.atom
+Expedia,https://medium.com/feed/expedia-group-tech
+Facebook,https://code.fb.com/feed/
+Facebook AI Research,https://research.fb.com/feed/
+Faraday,https://blog.faraday.io/rss/
+Feedzai,https://medium.com/feed/feedzaitech
+Fiftythree,http://making.fiftythree.com/feed.xml
+Findmypast,https://tech.findmypast.com/feed.xml
+Finn.no,http://tech.finn.no/atom.xml
+Firmafon,https://dev.firmafon.dk/blog/feed.xml
+Flickr,http://code.flickr.net/feed/
+Flipboard,http://engineering.flipboard.com/feed.xml
+Foursquare,https://engineering.foursquare.com/feed
+Freeletics,https://freeletics.engineering/feed.xml
+Funding Circle,https://engineering.fundingcircle.com/blog/feed.xml
+Future Processing,https://www.future-processing.pl/technical-blog/rss
+Galois,https://galois.com/feed/
+GameChanger,http://tech.gc.com/atom.xml
+Geoblink,https://tech.geoblink.com/feed/
+Gilt,http://tech.gilt.com/rss
+GIPHY,https://engineering.giphy.com/rss
+GitHub,https://githubengineering.com/atom.xml
+GitHub Old,https://blog.github.com/feed.xml
+GoCardless,https://gocardless.com/blog/atom.xml
+Good Eggs,https://team.goodeggs.com/feed
+Google Online Security,https://security.googleblog.com/feeds/posts/default
+Google Research,http://ai.googleblog.com/feeds/posts/default
+GoSquared,https://engineering.gosquared.com/feed
+GO-JEK,https://blog.gojekengineering.com/feed
+Grab,http://engineering.grab.com/feed.xml
+Grafana,https://grafana.com/blog/blog/index.xml
+Grammarly,https://tech.grammarly.com/feed.xml
+Grofers,https://lambda.grofers.com/feed
+Grouper,http://blog.joingrouper.com/rss
+Groupon,https://engineering.groupon.com/feed/
+Guardian,https://www.theguardian.com/info/series/digital-blog/rss
+Gusto,https://engineering.gusto.com/rss/
+HackerEarth,http://engineering.hackerearth.com/rss
+Haptik,https://haptik.ai/tech/feed/
+Harry's,http://engineering.harrys.com/feed.xml
+HashiCorp,https://www.hashicorp.com/blog/feed.xml
+Hashnode,https://engineering.hashnode.com/rss.xml
+Hashrocket,https://hashrocket.com/blog.rss
+Hasura,https://blog.hasura.io/feed
+Haus,https://engineering.haus.com/feed
+Heap,https://heapanalytics.com/blog/category/engineering/feed
+HERE,https://developer.here.com/blog/feed
+Heroku,https://blog.heroku.com/engineering/feed
+HireArt,http://code.hireart.com/feed.xml
+HomeAway,https://medium.com/feed/homeaway-tech-blog
+Honeybadger,http://blog.honeybadger.io/feed.xml
+Hootsuite,http://code.hootsuite.com/rss
+Hostinger,https://www.hostinger.com/blog/feed/
+Housing.com,https://medium.com/feed/engineering-housing
+HubSpot,https://product.hubspot.com/blog/rss.xml
+IBM developerWorks,https://developer.ibm.com/dwblog/feed/
+IFTTT,http://engineering.ifttt.com/feed.xml
+IMVU,https://engineering.imvu.com/feed/
+Imaginea,https://blog.imaginea.com/feed/
+Imgur,https://blog.imgur.com/feed/
+Indeed,http://engineering.indeedblog.com/feed/
+Instacart,https://tech.instacart.com/feed
+Instagram,https://instagram-engineering.com/feed
+Intel,https://software.intel.com/en-us/blogs/feed
+Intent HQ,http://engineering.intenthq.com/feed.xml
+Intent Media,http://intentmedia.com/feed/
+Intercom,https://engineering.intercom.io/feed.xml
+Intuit,https://quickbooks-engineering.intuit.com/feed
+InVision,http://engineering.invisionapp.com/index.xml
+Jane Street,https://blogs.janestreet.com/feed.xml
+Jet Technology,https://medium.com/feed/jettech
+Jobandtalent,https://jobandtalent.engineering/feed
+JobTeaser,https://medium.com/feed/jobteaser-dev-team
+Jolly Good Code,https://jollygoodcode.github.io/atom.xml
+Just Eat,https://tech.just-eat.com/feed/
+Khan Academy,http://engineering.khanacademy.org/rss.xml
+Kickstarter,https://kickstarter.engineering/feed
+King,https://techblog.king.com/feed/
+Kinvolk,https://kinvolk.io/blog/index.xml
+Kogan.com,https://devblog.kogan.com/blog?format=RSS
+Kolosek,https://kolosek.com/rss/
+Latacora,https://latacora.micro.blog/feed.xml
+Laterooms,http://engineering.laterooms.com/rss/
+LendingHome,https://tech.lendinghome.com/feed
+LINE,https://engineering.linecorp.com/en/blog/rss2
+LiveChat,https://developers.livechatinc.com/blog/rss
+LiveRamp,https://liveramp.com/engineering/feed/
+Localytics,https://eng.localytics.com/rss/
+Lyft,https://eng.lyft.com/feed
+Made Tech,http://www.madetech.com/feed
+Mallow Tech,http://blog.mallow-tech.com/feed/
+Mandrill,http://blog.mandrill.com/feeds/all.atom.xml
+MapTiler,https://www.maptiler.com/blog/feed/posts.xml
+Medium,https://medium.engineering/feed
+MemSQL,http://blog.memsql.com/feed/
+Mesosphere,https://mesosphere.com/feed/
+Microsoft Python Engineering,http://blogs.msdn.microsoft.com/pythonengineering/feed/
+Mixmax,https://engineering.mixmax.com/rss/
+Mixpanel,https://engineering.mixpanel.com/feed/
+MongoDB,https://engineering.mongodb.com/post?format=RSS
+Monsanto,http://engineering.monsanto.com/feed.xml
+Moove-it,https://blog.moove-it.com/rss
+Mozilla Automation Team,http://planet.mozilla.org/ateam/atom.xml
+Mozilla Hacks,https://hacks.mozilla.org/feed/
+Mozilla Release Engineering,http://planet.mozilla.org/releng/atom.xml
+Myntra,https://medium.com/feed/myntra-engineering
+Myntra Data Science,https://medium.com/feed/myntra-engineering/tagged/data-science
+Netflix,https://medium.com/feed/netflix-techblog
+New York Times,https://open.nytimes.com/feed
+Nextdoor,https://engblog.nextdoor.com/feed
+Nordic APIs,https://nordicapis.com/feed/
+Novoda,https://blog.novoda.com/rss/
+NPR Apps,http://blog.apps.npr.org/atom.xml
+Nvidia,https://blogs.nvidia.com/feed/
+OCTO Technology,https://blog.octo.com/en/feed/
+Okta,https://developer.okta.com/feed.xml
+OLX,https://tech.olx.com/feed
+OpenDNS,https://umbrella.cisco.com/blog/feed/
+OpenTable,http://tech.opentable.com/feed/
+OpenTable UK,http://tech.opentable.co.uk/atom.xml
+Oursky,https://code.oursky.com/feed/
+Oyster,http://tech.oyster.com/atom.xml
+Opensooq,http://engineering.opensooq.com/feed/
+Panorama Education,https://engineering.panoramaed.com/feed/
+Paypal,https://www.paypal-engineering.com/feed/
+Periscope Data,https://s3-us-west-1.amazonaws.com/periscope-rss/rss.xml
+PicCollage,https://tech.pic-collage.com/feed
+Pinterest,https://medium.com/feed/@Pinterest_Engineering
+Pivotal,http://feeds.feedburner.com/PivotalEngineeringJournal
+Postman,https://medium.com/feed/better-practices
+Postmark,https://postmarkapp.com/blog/feed.atom
+Postmates,https://medium.com/feed/postmates-blog/tagged/engineering
+Prezi,https://engineering.prezi.com/feed
+PubNub:,https://www.pubnub.com/blog/feed/
+PullReview,http://blog.8thcolor.com/feed.xml
+Pusher,https://making.pusher.com/feed.xml
+Raizlabs,https://www.raizlabs.com/dev/feed/
+RapidAPI,https://blog.rapidapi.com/feed/
+REA Group,https://www.rea-group.com/category/tech/feed/
+Realm.io,https://realm.io/feed.xml
+Redbubble,http://artplustech.com/feed/
+Redino,http://redino.net/blog/feed/
+Red Hat,https://developers.redhat.com/blog/feed/atom/
+Remind,http://engineering.remind.com/feed.xml
+RetailMeNot,https://medium.com/feed/retailmenot-engineering
+Rightscale,http://eng.rightscale.com/feed.xml
+Riot Games,https://engineering.riotgames.com/rss.xml
+RisingStack,https://blog.risingstack.com/rss/
+RoseHosting,https://www.rosehosting.com/blog/feed/
+Runtastic,https://www.runtastic.com/blog/en/feed/
+Salesforce,https://developer.salesforce.com/blogs/feed
+Schibsted Tech Polska,http://www.schibsted.pl/blog/feed/
+Scrapinghub,https://blog.scrapinghub.com/rss.xml
+Scrunch,https://tech.scrunch.com/blog/feeds/rss/
+Secret Escapes,http://tech.secretescapes.com/feed/
+Segment,https://segment.com/blog/atom.xml
+Semantics3,https://engineering.semantics3.com/feed
+Semaphore CI Community,https://semaphoreci.com/community/tutorials.atom
+Semaphore CI Engineering,http://semaphoreci.com/blog/engineering.xml
+Sensible,http://blog.sensible.io/rss
+Serverless,https://serverless.com/blog/feed.xml
+Settled,https://engineroom.settled.co.uk/feed
+Shape Security,http://engineering.shapesecurity.com/rss
+Sharethis,https://www.sharethis.com/feed/
+Shazam,https://blog.shazam.com/feed
+Shopify,http://engineering.shopify.com/blogs/engineering.atom
+ShowMax,https://tech.showmax.com/feed.xml
+Shyp,https://medium.com/feed/shyp-engineering
+Sift Science,https://blog.siftscience.com/feed/
+SitePoint,https://www.sitepoint.com/feed/
+Sky Betting &amp; Gaming,https://technology.skybettingandgaming.com/feed.xml
+Skyscanner,https://medium.com/feed/@SkyscannerEng
+Slack,https://slack.engineering/feed
+Small Improvements,https://tech.small-improvements.com/rss
+SmartRecruiters,https://up.smartrecruiters.com/feed
+Snyk,https://snyk.io/blog/feed.xml
+Songkick,https://devblog.songkick.com/feed
+Soshace,https://blog.soshace.com/en/feed/
+Soundcloud,https://developers.soundcloud.com/blog.rss
+Speedledger,http://engineering.speedledger.com/feed/
+Spotify,https://labs.spotify.com/feed/
+Sqreen,https://blog.sqreen.io/feed/
+Square,https://medium.com/feed/square-corner-blog
+Squarespace,https://engineering.squarespace.com/blog?format=RSS
+Stack Overflow,https://stackoverflow.blog/engineering/feed/
+Stackshare,https://stackshare.io/featured-posts.atom
+Stitch Fix,https://multithreaded.stitchfix.com/feed.xml
+Stormpath,https://stormpath.com/feed
+Strava,https://medium.com/feed/strava-engineering
+Stride,https://www.stridenyc.com/blog/rss.xml
+Stripe,https://stripe.com/blog/feed.rss
+SurveyMonkey,https://www.surveymonkey.com/feed/
+Takipi,https://blog.takipi.com/feed/
+Target,https://target.github.io/feed.xml
+TaskRabbit,http://tech.taskrabbit.com/feed.xml
+Teamwork,https://engineroom.teamwork.com/feed
+Teespring,http://teespring.engineering/index.xml
+theScore,http://techblog.thescore.com/feed.xml
+Thoughtbot,https://feeds.feedburner.com/GiantRobotsSmashingIntoOtherGiantRobots
+ThoughtWorks,https://www.thoughtworks.com/rss/insights.xml
+Thumbtack,https://www.thumbtack.com/engineering/feed/
+Ticketmaster,https://tech.ticketmaster.com/feed/
+Timescale,https://blog.timescale.com/feed
+Tinder,https://tech.gotinder.com/rss/
+Toptal,https://www.toptal.com/blog.rss
+TrackMaven,http://engineroom.trackmaven.com/feeds/rss.xml
+Transferwise,https://tech.transferwise.com/rss/
+Trello,https://tech.trello.com/feed.xml
+TripAdvisor,http://engineering.tripadvisor.com/rss
+Trivago,https://tech.trivago.com/index.xml
+TrueCar,https://www.drivenbycode.com/feed/
+Tumblr,https://engineering.tumblr.com/rss
+Twilio,https://www.twilio.com/blog/feed
+Twitter,https://blog.twitter.com/engineering/feed
+Twitch,https://medium.com/feed/twitch-news/tagged/engineering
+Uber,https://eng.uber.com/feed/
+Universe,https://engineering.universe.com/feed
+Upday,https://upday.github.io/feed.xml
+UpGrad,https://engineering.upgrad.com/feed
+Vena Solutions,https://engineering.vena.io/rss/
+Venmo,http://blog.venmo.com/hf2t3h4x98p5e13z82pl8j66ngcmry?format=RSS
+VersionEye,https://blog.versioneye.com/feed/
+Vevo,https://medium.com/feed/vevo-engineering
+Vine,http://engineering.vine.co/rss
+Vinted,http://engineering.vinted.com//atom.xml
+VNGRS,http://blog.vngrs.com/rss.xml
+VTS,https://buildingvts.com/feed
+WalmartLabs,https://medium.com/feed/walmartlabs
+Wattpad,http://engineering.wattpad.com/rss
+Wayfair,https://tech.wayfair.com/feed/
+Wealthfront,http://eng.wealthfront.com/feed/
+We Are Wizards,https://blog.wearewizards.io/all.atom.xml
+WebEngage,https://engineering.webengage.com/feed/
+Wemake.services,https://medium.com/feed/wemake-services
+WePay,https://wecode.wepay.com/feed.xml
+Wimdu,http://tech.wimdu.com/rss
+Wingify,http://engineering.wingify.com/atom.xml
+Wolox,https://medium.com/feed/@WoloxEngineering
+Wombat Security Technologies,http://development.wombatsecurity.com/feed.xml
+Wonga Technology,http://wongatech.github.io/feed.xml
+WyeWorks,https://wyeworks.com/blog/atom.xml
+XING,https://tech.xing.com/feed
+Xmartlabs,https://xmartlabs.com/feed.xml
+Yahoo,https://yahooeng.tumblr.com/rss
+Yammer,https://medium.com/feed/yammer-engineering
+Yelp,https://engineeringblog.yelp.com/feed.xml
+YLD!,https://medium.com/feed/yld-engineering-blog
+ZeeMee,https://zeemee.engineering/feed
+Zendesk,https://medium.com/feed/zendesk-engineering
+Zendesk(old),https://developerblog.zendesk.com/feed
+Zenefits,https://engineering.zenefits.com/feed/
+Zillow,https://www.zillow.com/engineering/rss
+Zomato,https://engineering.zomato.com/rss
+Zoosk,https://medium.com/feed/zoosk-engineering
+Zulily,https://zulily-tech.com/feed/
+Zumba,http://feeds.feedburner.com/zumba_engineering
+0xADADA,https://0xadada.pub/feed.xml
+Aaron Patterson,http://tenderlovemaking.com/atom.xml
+Abhinaba Basu,https://blogs.msdn.microsoft.com/abhinaba/feed/
+Abu Ashraf Masnun,http://masnun.com/feed
+Adam Bard,https://adambard.com/blog/feed.xml
+Adam Leventhal,http://dtrace.org/blogs/ahl/feed/
+Adam Tuliper,http://www.adamtuliper.com/feeds/posts/default
+Addy Osmani,http://addyosmani.com/rss.xml
+Adrian Colyer,https://blog.acolyer.org/feed/
+Alan Storm,https://alanstorm.com/feed/feed.xml
+Alex Rogozhnikov,http://arogozhnikov.github.io/feed.xml
+Alex Russell,https://infrequently.org/feed/
+Allison Kaptur,http://akaptur.com/atom.xml
+Amit Merchant,https://www.amitmerchant.com/feed.xml
+Anders Aarvik,http://aarvik.dk/rss/
+Andreas Schuster,https://computer.forensikblog.de/en/atom.xml
+Andrew Bancroft,https://www.andrewcbancroft.com/feed/
+Andrew Brampton,https://blog.bramp.net/index.xml
+Andrew Ray,http://blog.andrewray.me/rss/
+Andrey Akinshin,http://aakinshin.net/en/rss.xml
+Antirez,http://antirez.com/rss
+Ariejan de Vroom,https://www.devroom.io/index.xml
+Ariya Hidayat,https://ariya.io/index.xml
+Armin Ronacher,http://lucumr.pocoo.org/feed.atom
+Axel Rauschmayer,http://feeds.feedburner.com/2ality
+Bad Concurrency,http://bad-concurrency.blogspot.com/feeds/posts/default
+Barry Warsaw,http://www.wefearchange.org/feeds/all.atom.xml
+Bartlomiej Filipek,https://www.bfilipek.com/feeds/posts/default
+Ben McCormick,https://benmccormick.org/feed.json
+Bill the Lizard,http://www.billthelizard.com/feeds/posts/default
+Bjørn Johansen,https://bjornjohansen.no/feed
+Blake Erickson,https://blog.blakeerickson.com/feed.xml
+Blundell's Android Tutorials,http://blog.blundellapps.co.uk/feed/
+Bohops,https://bohops.com/feed/
+Brandon Rhodes,http://rhodesmill.org/brandon/feed
+Brendan Eich,https://brendaneich.com/feed/
+Brendan Gregg,http://www.brendangregg.com/blog/rss.xml
+Brujo Benavides,https://medium.com/feed/@elbrujohalcon
+Bryan Cantrill,http://dtrace.org/blogs/bmc/feed/
+Carlos Becker,https://carlosbecker.com/index.xml
+Chen Hui Jing,https://www.chenhuijing.com/feed.xml
+Chien Tran,http://thelazylog.com/rss/
+Chris Hager,https://www.metachris.com/index.xml
+Chris Wellons,http://nullprogram.com/feed/
+Clay McLeod,http://blog.claymcleod.io/atom.xml
+Cocoa Is My Girlfriend,http://www.cimgf.com/feed/
+Code with style!,https://codewithstyle.info/feed/
+Codrops,https://tympanus.net/codrops/rss
+Daily JS,https://medium.com/feed/dailyjs
+Daily Tech Video,http://dailytechvideo.com/feed/
+Dan Luu,https://danluu.com/atom.xml
+Daniel Doubrovkine (dB.),https://code.dblock.org/feed.xml
+Daniel Schmidt,https://medium.com/feed/@dschmidt1992
+Dave Atchley,https://www.datchley.name/rss/
+Dave Cheney,https://dave.cheney.net/feed
+David Walsh,https://davidwalsh.name/feed/atom
+Dean Hume,https://deanhume.com/rss/
+Deborah Digges,http://deborah-digges.github.io/atom.xml
+Dennis Felsing,https://hookrace.net/blog/feed/
+Dennis Yurichev,https://yurichev.com/blog/rss.xml
+Dereuromark,https://www.dereuromark.de/feed/
+Discover Meteor,https://www.discovermeteor.com/feed.xml
+Domenico Luciani,https://domenicoluciani.com/feed.xml
+Dot Dev (.dev),https://dotdev.co/feed/
+Dragan Djuric,https://dragan.rocks/feed.xml
+Dragan Gaic,https://www.gajotres.net/feed/
+Drew DeVault,https://drewdevault.com/feed.xml
+Eddie Smith,http://www.practicallyefficient.com/feed.xml
+Edgar Aroutiounian,https://hyegar.com/rss.xml
+Edward Faulkner,https://eaf4.com/rss
+Elegant Code,https://elegantcode.com/feed/
+Eli Bendersky,https://eli.thegreenplace.net/feeds/all.atom.xml
+Eric Elliot,https://medium.com/feed/javascript-scene
+Eric Lippert,https://ericlippert.com/feed/
+Erik Runyon,https://erikrunyon.com/feed.xml
+Evan Hahn,https://evanhahn.com/feed.xml
+Evan Jones,http://www.evanjones.ca/index.rss
+Evan Miller,http://www.evanmiller.org/news.xml
+Evan Tahler,https://blog.evantahler.com/feed
+Fabrizio Branca,http://fbrnc.net/blog.atom
+Federico Cargnelutti,https://blog.fedecarg.com/feed/
+Federico Tomassetti,https://tomassetti.me/feed/
+Filippo Valsorda,https://blog.filippo.io/rss/
+Freek Van der Herten,https://murze.be/feed
+Gleb Bahmutov,https://glebbahmutov.com/blog/atom.xml
+Glenn Engstrand,http://glennengstrand.info/blog/index.php?xml_sitemap=params=;html=true
+Graham King,https://www.darkcoding.net/feed/
+Guido van Rossum,http://neopythonic.blogspot.com/feeds/posts/default
+Guilherme Rodrigues,https://firstdoit.com/feed
+Hayden James,https://haydenjames.io/rss
+Henrik Lau Eriksson,https://conductofcode.io/feed.xml
+Henrik Warne,https://henrikwarne.com/feed/
+High Scalability,http://feeds.feedburner.com/HighScalability
+Huon Wilson,http://huonw.github.io/blog/atom.xml
+Hypriot,https://blog.hypriot.com/index.xml
+Ian Hummel,https://themodernlife.github.io/feed.xml
+Ian Sommerville,http://iansommerville.com/systems-software-and-technology/feed/
+Idontgetoutmuch's Weblog,https://idontgetoutmuch.wordpress.com/feed/
+Ievgen Kuzminov,http://stdout.in/en/cat/all.rss
+Ilija Eftimov,http://ieftimov.com/feed.xml
+Ilya Grigorik,https://www.igvita.com/feed/
+Ivan Ursul,https://ivanursul.com/feed.xml
+Jacopo Tarantino,https://jack.ofspades.com/rss/index.html
+Jake Trent,https://jaketrent.com/index.xml
+Jake Wharton,http://jakewharton.com/feed.xml
+Jake Yesbeck,http://jakeyesbeck.com/atom.xml
+James Hague,http://prog21.dadgum.com/atom.xml
+James Long,http://feedpress.me/jlongster
+Jamis Buck,http://feeds.feedburner.com/buckblog
+Jan Lelis,https://idiosyncratic-ruby.com/feed.xml
+Jay Fields,http://blog.jayfields.com/feeds/posts/default
+Jeff Atwood,http://feeds.feedburner.com/codinghorror
+Jeff Preshing,http://preshing.com/feed
+Jeremy Kun,https://jeremykun.com/feed/
+Jerry Gamblin,https://jerrygamblin.com/feed/
+Jesal Gadhia,https://jes.al/atom.xml
+Jessie Frazelle,https://blog.jessfraz.com/index.xml
+Jesus Castello,http://www.blackbytes.info/rss
+Joe Nelson,https://begriffs.com/atom.xml
+Joel Spolsky,https://www.joelonsoftware.com/feed/
+Johannes Brodwall,http://johannesbrodwall.com/feed/
+John Resig,https://feeds.feedburner.com/JohnResig
+John Wittenauer,https://www.johnwittenauer.net/rss/
+Jon Kensy,http://www.jonkensy.com/feed/
+Jon Skeet,https://codeblog.jonskeet.uk/feed/
+Jonas Plum,https://blog.cugu.eu/index.xml
+Jonathan Dekhtiar,http://www.born2data.com/feed_atom.xml
+Jonathan Snook,https://snook.ca/jonathan/index.rdf
+Josh Haberman,http://blog.reverberate.org/feed.xml
+Josh Sherman,https://joshtronic.com/atom.xml
+Juan Treminio,https://jtreminio.com/atom.xml
+Julia Evans,https://jvns.ca/atom.xml
+Junior Grossi,https://blog.jgrossi.com/feed/
+Justin Weiss,https://www.justinweiss.com/atom.xml
+Juri Strumpflohner,https://feeds.feedburner.com/juristrumpflohner
+K. Harrison,https://useyourloaf.com/blog/rss.xml
+Kevin Burke,https://kev.inburke.com/feed/
+Kirill Shevchenko,https://medium.com/feed/@kirill_shevch
+Kyle Kingsbury,https://aphyr.com/posts.atom
+Lambda the Ultimate,http://lambda-the-ultimate.org/rss.xml
+Larry Land,http://lg.io/feed.xml
+Lazarus Lazaridis,https://iridakos.com/feed.xml
+Lea Verou,http://lea.verou.me/feed/
+Lerner Consulting Blog,http://blog.lerner.co.il/feed/
+Life Plus Linux,http://lifepluslinux.blogspot.com/feeds/posts/default
+Luciano Mammino,http://loige.co/rss/
+Manu Sporny,http://manu.sporny.org/feed/
+Marc Plano-Lesay,https://enoent.fr/atom.xml
+Marcelo Rinesi,https://blog.rinesi.com/feed/
+Marco Pivetta,https://ocramius.github.io/atom.xml
+Marek Majkowski,https://idea.popcount.org/rss.xml
+Mark Seaborn,http://lackingrhoticity.blogspot.com/feeds/posts/default
+Martin Fowler,https://martinfowler.com/feed.atom
+Mary Rose Cook,https://maryrosecook.com/blog/feed.xml
+Matt Aimonetti,https://matt.aimonetti.net/atom.xml
+Matt Cutts,https://www.mattcutts.com/blog/feed/
+Matt Might,http://matt.might.net/articles/feed.rss
+Matt Warren,http://mattwarren.org/atom.xml
+Matthew Green,https://blog.cryptographyengineering.com/feed/
+Michael Crump,https://www.michaelcrump.net/feed.xml
+Michaël Gallego,http://www.michaelgallego.fr/feed.xml
+Michael Herman,http://mherman.org/feed.xml
+Miguel Quinones,https://www.miqu.me/atom.xml
+Mike Ash,http://www.mikeash.com/pyblog/rss.py
+Mike Fogus,http://blog.fogus.me/feed/
+Milosz Galazka,https://blog.sleeplessbeastie.eu/feed.xml
+Miro Cupak,https://mirocupak.com/feed.xml
+Monica Dinculescu,https://meowni.ca/atom.xml
+Monstermuffin,https://blog.monstermuffin.org/feed/
+Mykhailo Kozik,http://feeds.feedburner.com/mishadoff
+Natasha Murashev,https://natashatherobot.com/rss
+Nelson Elhage,https://blog.nelhage.com/atom.xml
+Nic Raboy,https://www.thepolyglotdeveloper.com/blog/index.xml
+Nick Craver,https://nickcraver.com/blog/feed.xml
+Nick Desaulniers,https://nickdesaulniers.github.io/atom.xml
+Nick Galbreath,https://www.client9.com/index.xml
+Nicolas Liochon,http://blog.thislongrun.com/feeds/posts/default
+Nicolai Parlog (CodeFX),http://blog.codefx.org/feed/
+Nikola Brežnjak,http://www.nikola-breznjak.com/blog/feed/atom/
+Nikolay Nemshilov,http://nikolay.rocks/atom.xml
+NSHipster,https://nshipster.com/feed.xml
+Nate Berkopec,https://www.nateberkopec.com/feed.xml
+Ofer Zelig,https://fullstack.info/feed/
+Ole Begemann,https://oleb.net/blog/atom.xml
+Oona Räisänen,http://www.windytan.com/feeds/posts/default
+Pamela Fox,http://blog.pamelafox.org/feeds/posts/default
+Pat Shaughnessy,http://feeds2.feedburner.com/patshaughnessy
+Paul Graham,http://www.aaronsw.com/2002/feeds/pgessays.rss
+Paul Irish,https://feeds.feedburner.com/paul-irish
+Paul Lewis,https://aerotwist.com/blog/feed/
+Paweł Chudzik,https://blog.pchudzik.com/index.xml
+Peter Norvig,http://www.norvig.com/rss-feed.xml
+Peter Steinberger,http://petersteinberger.com/atom.xml
+Peteris Krumins,http://www.catonmat.net/feed/
+Petr Mitrichev,https://petr-mitrichev.blogspot.com/feeds/posts/default
+Philip Walton,https://feeds.feedburner.com/philipwalton
+Philipp Oppermann,https://os.phil-opp.com/atom.xml
+Pony Foo,https://feeds.feedburner.com/ponyfoo
+Piotr Pasich,http://piotrpasich.com/feed/
+Piotr Wittchen,http://blog.wittchen.biz.pl/feed.xml
+Rachel Kroll,https://rachelbythebay.com/w/atom.xml
+Radek Pazdera,http://radek.io/rss.xml
+Radim Řehůřek,https://radimrehurek.com/feed/
+Ramon Fried,https://nativeguru.wordpress.com/feed/
+Ray Wenderlich,https://www.raywenderlich.com/rss
+Raymond Chen,https://blogs.msdn.microsoft.com/oldnewthing/feed
+Raymond Hettinger,https://rhettinger.wordpress.com/feed/
+ReactJS News,https://reactjsnews.com/feed.xml
+Real Python,https://realpython.com/atom.xml
+Reginald Braithwaite,http://raganwald.com/atom.xml
+Regular Geek,http://feeds.regulargeek.com/RegularGeek
+Rob Allen,https://akrabat.com/feed/
+Robert C. Martin,http://blog.cleancoder.com/atom.xml
+Robin Ward,https://eviltrout.com/feed.xml
+Robin Wilson,http://blog.rtwilson.com/feed/
+Rudy Huyn,http://www.rudyhuyn.com/blog/feed/
+Rudolf Olah,https://neverfriday.com/feed/
+Ruslan Spivak,https://ruslanspivak.com/feeds/all.atom.xml
+Sakib Sami,https://www.sakib.ninja/rss/
+Sam Saffron,http://samsaffron.com/posts.rss
+Sergey Zhuk,http://sergeyzhuk.me/feed.xml
+Schakko,https://schakko.de/feed
+Scott Hanselman,http://feeds.hanselman.com/ScottHanselman
+Scott Johnson,http://fuzzyblog.io//blog/feed.xml
+Simon Reimler,https://devdactic.com/feed/
+Srinivas Tamada,https://www.9lessons.info/feeds/posts/default
+Stack Abuse,http://stackabuse.com/rss/
+Stanko Tadić,https://muffinman.io/atom.xml
+Stefan Parker,http://codebeforethehorse.tumblr.com/rss
+Stephen Colebourne,http://blog.joda.org/feeds/posts/default
+Steve Bellovin,https://www.cs.columbia.edu/~smb/blog/control/blog.xml
+Steve Yegge,https://steve-yegge.blogspot.com/feeds/posts/default
+Sudhagar,http://sudhagar.com/feed.xml
+Swizec Teller,https://swizec.com/blog/feed
+Tero Parviainen,http://teropa.info/blog/feed.xml
+That Thing In Swift,https://thatthinginswift.com/index.xml
+The Coded Self,https://thecodedself.github.io/feed.xml
+The Daily WTF,http://thedailywtf.com/rss
+Thomas Young,http://upcoder.com/feed
+Tikhon Jelvis,http://jelv.is/blog/rss.xml
+Todd Motto,https://toddmotto.com/feed.xml
+T.J. Maher,http://www.tjmaher.com/feeds/posts/default
+Una Kravets,https://una.im/feed.xml
+Undocumented Matlab,https://undocumentedmatlab.com/feed
+Vanilla Java,http://vanillajava.blogspot.com/feeds/posts/default
+Vlad Mihalcea,https://vladmihalcea.com/feed/
+Wilfred Hughes,http://www.wilfred.me.uk/rss.xml
+William Kennedy,https://www.ardanlabs.com/blog/index.xml
+Wojtek Gawroński,http://www.afronski.pl/feed.xml
+Yegor Bugayenko,https://www.yegor256.com/rss.xml
+Yifan Lu,http://yifan.lu/feed.xml
+Zach Holman,https://zachholman.com/atom.xml
+Zolmeister,https://zolmeister.com/feeds/posts/default
+Android,https://android-developers.googleblog.com/feeds/posts/default
+Atom.io,http://blog.atom.io/feed.xml
+Bootstrap.com,https://blog.getbootstrap.com/feed.xml
+Crystal,https://crystal-lang.org/feed.xml
+Go,https://blog.golang.org/feed.atom
+IPFS,https://ipfs.io/blog/index.xml
+jOOQ,https://blog.jooq.org/feed/
+Klipse,http://blog.klipse.tech//feed.xml
+Kotlin,https://blog.jetbrains.com/kotlin/feed/
+Laravel,https://feed.laravel-news.com/
+Microsoft Edge,https://blogs.windows.com/msedgedev/rss
+.NET,https://blogs.msdn.microsoft.com/dotnet/feed/
+React,https://reactjs.org/feed.xml
+React Native,https://facebook.github.io/react-native/blog/atom.xml
+Red,https://www.red-lang.org/feeds/posts/default
+RocksDB,http://rocksdb.org/feed.xml
+Rust,https://blog.rust-lang.org/feed.xml
+Sketch,https://blog.sketchapp.com/feed
+Swift,https://developer.apple.com/swift/blog/news.rss
+Vertabelo,http://www.vertabelo.com/_rss/blog.xml
