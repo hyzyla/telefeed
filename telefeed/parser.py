@@ -57,11 +57,20 @@ def parse_date(item: FeedDict) -> datetime:
 
 
 def get_posts(feed: Feed) -> List[Post]:
-    _feed = feedparser.parse(feed.url)
+    try:
+        _feed = feedparser.parse(feed.url)
+    except Exception as exc:
+        print(exc)
+        return []
 
     for item in _feed.entries:
-        content = parse_content(item)
-        date = parse_date(item)
+        try:
+            content = parse_content(item)
+            date = parse_date(item)
+        except Exception as e:
+            print(e)
+            continue
+
         yield Post(
             title=item.title,
             body=content,
