@@ -18,6 +18,7 @@ services:
       SECURITY_SEND_REGISTER_EMAIL: "false"
 
       REDIS_URL: redis://redis:6379/12
+      BROKER_POOL_LIMIT: "0"
 
     build: .
     image: bot-web

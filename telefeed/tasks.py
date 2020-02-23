@@ -1,16 +1,14 @@
 import logging
-
-import celery
 import os
 
+import celery
 import click
 from flask.cli import AppGroup
 
 from . import app, db
-from .models import Feed, Channel
-from . import telegram
 from . import parser
-from .templates.db import select_feeds, select_channels, select_pending_posts, delete_old_posts
+from . import telegram
+from .queries import select_feeds, select_channels, select_pending_posts, delete_old_posts
 
 logger = logging.getLogger(__name__)
 FEED_PARSE_LIMIT = 1

@@ -1,9 +1,9 @@
 from flask import url_for, redirect, request, abort
-from flask_admin import Admin
+from flask_admin import Admin, BaseView, expose
 from flask_admin.contrib import sqla
 from flask_login import current_user
 
-from . import models, db, app
+from . import models, db, app, tasks
 
 
 class AdminModelView(sqla.ModelView):
@@ -27,8 +27,15 @@ class AdminModelView(sqla.ModelView):
                 return redirect(url_for('security.login', next=request.url))
 
 
+class TaskView(BaseView):
+    @expose('/')
+    def index(self):
+        return self.render('admin/tasks.html', tasks=tasks.worker.tasks)
+
+
 admin = Admin(app, url='/', name='Telefeed', template_mode='bootstrap3')
 
+admin.add_view(TaskView(name='Tasks', endpoint='tasks'))
 admin.add_view(AdminModelView(models.Post, db.session))
 admin.add_view(AdminModelView(models.Feed, db.session))
 admin.add_view(AdminModelView(models.Role, db.session))

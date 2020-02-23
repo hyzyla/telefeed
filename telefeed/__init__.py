@@ -1,6 +1,5 @@
 import os
 
-import click
 import flask
 from flask import url_for
 from flask_migrate import Migrate
@@ -19,6 +18,7 @@ app.config['SECURITY_PASSWORD_HASH'] = os.environ['SECURITY_PASSWORD_HASH']
 app.config['SECURITY_PASSWORD_SALT'] = os.environ['SECURITY_PASSWORD_SALT']
 app.config['SECURITY_REGISTERABLE'] = os.environ['SECURITY_REGISTERABLE']
 app.config['SECURITY_SEND_REGISTER_EMAIL'] = os.environ['SECURITY_SEND_REGISTER_EMAIL']
+app.config['BROKER_POOL_LIMIT'] = os.environ['BROKER_POOL_LIMIT']
 
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)

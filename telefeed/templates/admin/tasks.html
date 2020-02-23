@@ -1,0 +1,10 @@
+{% extends 'admin/master.html' %}
+{% block body %}
+    <p>Here I'm going to display some data.</p>
+    <ul>
+    {% for task in tasks.values() %}
+        <li>{{ task.name }}  {{ task.backend }} </li>
+    {% endfor %}
+    </ul>
+
+{% endblock %}
