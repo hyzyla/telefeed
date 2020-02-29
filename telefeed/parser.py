@@ -53,7 +53,8 @@ def parse_content(item: FeedDict) -> str:
 
 
 def parse_date(item: FeedDict) -> datetime:
-    return time_struct_to_datetime(item.published_parsed)
+    date = item.ge§t('published_parsed') or item.get('updated_parsed')
+    return time_struct_to_datetime(date)
 
 
 def get_posts(feed: Feed) -> List[Post]:
@@ -68,6 +69,7 @@ def get_posts(feed: Feed) -> List[Post]:
             content = parse_content(item)
             date = parse_date(item)
         except Exception as e:
+            print(item)
             print(e)
             continue
 
