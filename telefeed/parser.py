@@ -53,7 +53,7 @@ def parse_content(item: FeedDict) -> str:
 
 
 def parse_date(item: FeedDict) -> datetime:
-    date = item.ge§t('published_parsed') or item.get('updated_parsed')
+    date = item.get('published_parsed') or item.get('updated_parsed')
     return time_struct_to_datetime(date)
 
 
