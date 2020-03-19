@@ -27,6 +27,7 @@ worker.conf.update(
     BROKER_URL=os.environ['REDIS_URL'],
     CELERY_RESULT_BACKEND=os.environ['REDIS_URL'],
     CELERY_TASK_SERIALIZER="json",
+    BROKER_POOL_LIMIT=0,
 )
 
 
