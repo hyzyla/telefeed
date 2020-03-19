@@ -35,7 +35,7 @@ def parse_feeds(offset: int = 0):
     logger.info('Feed parsing started')
     feeds = select_feeds(offset, limit=FEED_PARSE_LIMIT)
     if not feeds:
-        return
+        return send_to_channels()
 
     for feed in feeds:
         posts = []
@@ -73,6 +73,8 @@ def send_to_channels():
         channel.date_cursor = max(post.date for post in posts)
         db.session.commit()
 
+    cleanup_posts()
+
 
 @worker.task
 def cleanup_posts():
@@ -88,7 +90,7 @@ tasks_group = AppGroup('tasks')
 @click.argument('args', nargs=-1)
 def run_async(func, args):
     name = f'telefeed.tasks.{func}'
-    worker.tasks[name].delay(*args)
+    worker.tasks[name].delay(*args).forget()
 
 
 app.cli.add_command(tasks_group)

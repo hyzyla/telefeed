@@ -1,5 +1,5 @@
 import os
-from typing import List
+from typing import List, Generator, Set
 
 import telegram
 
@@ -33,9 +33,18 @@ def _post_markdown(post: Post) -> str:
      )
 
 
+def _uniq_posts(posts: List[Post]) -> Generator[Post, None, None]:
+    seen: Set[str] = set()
+    for post in posts:
+        if post.title in seen:
+            continue
+        seen.add(post.title)
+        yield post
+
+
 def send_posts(channel: Channel, posts: List[Post]) -> None:
     text = ''
-    for post in posts:
+    for post in _uniq_posts(posts):
         markdown = _post_markdown(post)
         if len(markdown) >= 4096:
             continue
