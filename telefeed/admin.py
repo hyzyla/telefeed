@@ -33,11 +33,19 @@ class TaskView(BaseView):
         return self.render('admin/tasks.html', tasks=tasks.worker.tasks)
 
 
+class PostModelView(AdminModelView):
+    column_searchable_list = ('title', 'body', 'link')
+
+
+class FeedModelView(AdminModelView):
+    column_searchable_list = ('name', 'url')
+
+
 admin = Admin(app, url='/', name='Telefeed', template_mode='bootstrap3')
 
 admin.add_view(TaskView(name='Tasks', endpoint='tasks'))
-admin.add_view(AdminModelView(models.Post, db.session))
-admin.add_view(AdminModelView(models.Feed, db.session))
+admin.add_view(PostModelView(models.Post, db.session))
+admin.add_view(FeedModelView(models.Feed, db.session))
 admin.add_view(AdminModelView(models.Role, db.session))
 admin.add_view(AdminModelView(models.User, db.session))
 admin.add_view(AdminModelView(models.Channel, db.session))
