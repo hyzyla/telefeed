@@ -41,7 +41,11 @@ class Post(db.Model):
     body = db.Column(db.Text, nullable=False)
     link = db.Column(db.Text, nullable=False)
     date = db.Column(db.DateTime, nullable=False)
-    feed_id = db.Column(db.Integer, db.ForeignKey('feeds.id'), nullable=False)
+    feed_id = db.Column(
+        db.Integer,
+        db.ForeignKey('feeds.id', ondelete='CASCADE'),
+        nullable=False,
+    )
     feed = db.relationship('Feed')
 
     def __repr__(self):
@@ -66,7 +70,7 @@ class Channel(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.Text, nullable=False)
-    feeds = db.relationship('Feed', secondary='channel_feeds')
+    feeds = db.relationship('Feed', secondary='channel_feeds', backref='channels')
 
     date_cursor = db.Column(db.DateTime, nullable=True)
 
@@ -78,7 +82,15 @@ class ChannelFeeds(db.Model):
     __tablename__ = 'channel_feeds'
 
     id = db.Column(db.Integer, primary_key=True)
-    feed_id = db.Column(db.Integer, db.ForeignKey('feeds.id'), nullable=False)
-    channel_id = db.Column(db.Integer, db.ForeignKey('channels.id'), nullable=False)
+    feed_id = db.Column(
+        db.Integer,
+        db.ForeignKey('feeds.id', ondelete='CASCADE'),
+        nullable=False,
+    )
+    channel_id = db.Column(
+        db.Integer,
+        db.ForeignKey('channels.id', ondelete='CASCADE'),
+        nullable=False,
+    )
 
     date_cursor = db.Column(db.DateTime, nullable=True)
