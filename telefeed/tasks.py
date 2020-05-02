@@ -24,10 +24,10 @@ celery.Task = ContextTask
 
 worker = celery.Celery('example')
 worker.conf.update(
-    BROKER_URL=os.environ['REDIS_URL'],
-    CELERY_RESULT_BACKEND=os.environ['REDIS_URL'],
-    CELERY_TASK_SERIALIZER="json",
-    BROKER_POOL_LIMIT=0,
+    broker_url=os.environ['REDIS_URL'],
+    celery_result_backend=os.environ['REDIS_URL'],
+    celery_task_serializer="json",
+    broker_pool_limit=0,
     redis_max_connections=0,
     task_ignore_result=True,
     result_expires=60 * 60, # 1 hour
