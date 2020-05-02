@@ -13,9 +13,12 @@ class AdminModelView(sqla.ModelView):
         validate_user_admin()
 
 
-class TaskView(BaseView):
+class AdminView(BaseView):
     def is_accessible(self):
         return is_user_admin()
+
+
+class TaskView(AdminView):
 
     @expose('/')
     def index(self):

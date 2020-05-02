@@ -37,7 +37,7 @@ def time_struct_to_datetime(struct: time.struct_time) -> dataclass:
 
 
 def parse_content(item: FeedDict) -> str:
-    content = get_text_from_html(item.summary)
+    content = get_text_from_html(item.get('summary') or '')
     content = textwrap.shorten(content, width=300, placeholder="...")
     content = (
         content
