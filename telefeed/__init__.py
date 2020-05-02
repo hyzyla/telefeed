@@ -27,6 +27,7 @@ from . import models
 from . import admin
 from . import tasks
 from . import parser
+from . import handlers
 
 user_store = SQLAlchemyUserDatastore(db, models.User, models.Role)
 security = Security(app, user_store)

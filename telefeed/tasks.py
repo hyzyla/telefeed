@@ -30,7 +30,7 @@ worker.conf.update(
     broker_pool_limit=0,
     redis_max_connections=0,
     task_ignore_result=True,
-    result_expires=60 * 60, # 1 hour
+    result_expires=60 * 60,  # 1 hour
 )
 
 
@@ -94,7 +94,7 @@ tasks_group = AppGroup('tasks')
 @click.argument('args', nargs=-1)
 def run_async(func, args):
     name = f'telefeed.tasks.{func}'
-    worker.tasks[name].delay(*args).forget()
+    worker.tasks[name].delay(*args)
 
 
 app.cli.add_command(tasks_group)

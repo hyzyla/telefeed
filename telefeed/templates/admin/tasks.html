@@ -2,9 +2,19 @@
 {% block body %}
     <p>Here I'm going to display some data.</p>
     <ul>
-    {% for task in tasks.values() %}
-        <li>{{ task.name }}  {{ task.backend }} </li>
+    {% for task in tasks %}
+        <li>{{ task.name }}
+            <button onclick="onTaskClick('{{ task.name }}')">run</button>
+        </li>
     {% endfor %}
     </ul>
+    <script>
+        async function onTaskClick(name) {
+            await fetch(`/tasks/${name}/execution`, {
+                method: 'POST',
+            });
+            alert('Success!')
+        }
+    </script>
 
 {% endblock %}

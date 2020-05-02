@@ -1,36 +1,30 @@
-from flask import url_for, redirect, request, abort
 from flask_admin import Admin, BaseView, expose
 from flask_admin.contrib import sqla
-from flask_login import current_user
 
-from . import models, db, app, tasks
+from telefeed.utils import is_user_admin, validate_user_admin
+from . import app, db, models, tasks
 
 
 class AdminModelView(sqla.ModelView):
     def is_accessible(self):
-        return (
-            current_user.is_active and
-            current_user.is_authenticated and
-            current_user.has_role('superuser')
-        )
+        return is_user_admin()
 
     def _handle_view(self, name, **kwargs):
-        """
-        Override builtin _handle_view in order to redirect users when a view is not accessible.
-        """
-        if not self.is_accessible():
-            if current_user.is_authenticated:
-                # permission denied
-                abort(403)
-            else:
-                # login
-                return redirect(url_for('security.login', next=request.url))
+        validate_user_admin()
 
 
 class TaskView(BaseView):
+    def is_accessible(self):
+        return is_user_admin()
+
     @expose('/')
     def index(self):
-        return self.render('admin/tasks.html', tasks=tasks.worker.tasks)
+        _tasks = [
+            task
+            for task in tasks.worker.tasks.values()
+            if task.name.startswith('telefeed')
+        ]
+        return self.render('admin/tasks.html', tasks=_tasks)
 
 
 class PostModelView(AdminModelView):
