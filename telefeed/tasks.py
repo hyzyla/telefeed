@@ -28,6 +28,9 @@ worker.conf.update(
     CELERY_RESULT_BACKEND=os.environ['REDIS_URL'],
     CELERY_TASK_SERIALIZER="json",
     BROKER_POOL_LIMIT=0,
+    redis_max_connections=0,
+    task_ignore_result=True,
+    result_expires=60 * 60, # 1 hour
 )
 
 
