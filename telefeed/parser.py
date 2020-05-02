@@ -67,10 +67,14 @@ def get_posts(feed: Feed) -> List[Post]:
     for item in _feed.entries:
         try:
             content = parse_content(item)
-            date = parse_date(item)
         except Exception as e:
             print(item)
             print(e)
+            continue
+
+        try:
+            date = parse_date(item)
+        except Exception:
             continue
 
         yield Post(

@@ -3,6 +3,7 @@ import os
 
 import celery
 import click
+from celery.utils.log import get_task_logger
 from flask.cli import AppGroup
 
 from . import app, db
@@ -10,7 +11,8 @@ from . import parser
 from . import telegram
 from .queries import select_feeds, select_channels, select_pending_posts, delete_old_posts
 
-logger = logging.getLogger(__name__)
+
+logger = get_task_logger(__name__)
 FEED_PARSE_LIMIT = 1
 
 
@@ -36,7 +38,7 @@ worker.conf.update(
 
 @worker.task
 def parse_feeds(offset: int = 0):
-    logger.info('Feed parsing started')
+    logger.info(f'Feed parsing started {offset}')
     feeds = select_feeds(offset, limit=FEED_PARSE_LIMIT)
     if not feeds:
         return send_to_channels()
@@ -63,6 +65,7 @@ def parse_feeds(offset: int = 0):
 
 @worker.task
 def send_to_channels():
+    logger.info(f'Sending posts to channels')
     channels = select_channels()
     for channel in channels:
         # Get new posts
