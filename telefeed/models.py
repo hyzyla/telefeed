@@ -72,6 +72,20 @@ class Channel(db.Model):
     name = db.Column(db.Text, nullable=False)
     feeds = db.relationship('Feed', secondary='channel_feeds', backref='channels')
 
+    # Positing settings
+    show_preview = db.Column(
+        db.Boolean,
+        nullable=False,
+        default=False,
+        server_default='0',
+    )
+    separate_links = db.Column(
+        db.Boolean,
+        nullable=False,
+        default=False,
+        server_default='0',
+    )
+
     date_cursor = db.Column(db.DateTime, nullable=True)
 
     def __repr__(self):
