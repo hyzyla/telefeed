@@ -15,7 +15,7 @@ def _send_message(channel: Channel, text: str) -> None:
             chat_id=f'@{channel.name}',
             text=text,
             parse_mode=telegram.ParseMode.MARKDOWN,
-            disable_web_page_preview=True,
+            disable_web_page_preview=channel.show_preview,
         )
     except Exception as exc:
         print(exc)
@@ -47,6 +47,11 @@ def send_posts(channel: Channel, posts: List[Post]) -> None:
     for post in _uniq_posts(posts):
         markdown = _post_markdown(post)
         if len(markdown) >= 4096:
+            continue
+
+        # Every post will be sent as separate message
+        if channel.separate_links:
+            _send_message(channel, markdown)
             continue
 
         if len(text + markdown) < 4000:
