@@ -15,7 +15,7 @@ def _send_message(channel: Channel, text: str) -> None:
             chat_id=f'@{channel.name}',
             text=text,
             parse_mode=telegram.ParseMode.MARKDOWN,
-            disable_web_page_preview=channel.show_preview,
+            disable_web_page_preview=not channel.show_preview,
         )
     except Exception as exc:
         print(exc)
