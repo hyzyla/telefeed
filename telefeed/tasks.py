@@ -9,8 +9,10 @@ from flask.cli import AppGroup
 from . import app, db
 from . import parser
 from . import telegram
-from .queries import select_feeds, select_channels, select_pending_posts, delete_old_posts
-
+from .queries import (
+    select_feeds, select_channels, select_pending_posts,
+    delete_old_posts, insert_posts
+)
 
 logger = get_task_logger(__name__)
 FEED_PARSE_LIMIT = 1
@@ -56,11 +58,12 @@ def parse_feeds(offset: int = 0):
             continue
 
         feed.date_cursor = max(post.date for post in posts)
-        db.session.add_all(posts)
+
+        insert_posts(posts)
         db.session.commit()
 
     # Run job again with increased offset
-    parse_feeds.delay(offset + 1)
+    parse_feeds(offset + 1)
 
 
 @worker.task
@@ -97,7 +100,7 @@ tasks_group = AppGroup('tasks')
 @click.argument('args', nargs=-1)
 def run_async(func, args):
     name = f'telefeed.tasks.{func}'
-    worker.tasks[name].delay(*args)
+    worker.tasks[name](*args)
 
 
 app.cli.add_command(tasks_group)

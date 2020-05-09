@@ -1,6 +1,7 @@
 from typing import List
 
 import sqlalchemy as sa
+from sqlalchemy.dialects.postgresql import insert
 from sqlalchemy.orm import contains_eager
 
 from telefeed import db
@@ -54,3 +55,21 @@ def delete_old_posts() -> None:
 
     db.session.query(Post).filter(Post.id.in_(query)).delete(synchronize_session=False)
     db.session.commit()
+
+
+def insert_posts(posts: List[Post]) -> None:
+    posts_data = [
+        {
+            'title': post.title,
+            'body': post.body,
+            'link': post.link,
+            'date': post.date,
+            'feed_id': post.feed_id or post.feed.id,
+        }
+        for post in posts
+    ]
+    db.session.execute(
+        insert(Post)
+        .values(posts_data)
+        .on_conflict_do_nothing(index_elements=['link'])
+    )
