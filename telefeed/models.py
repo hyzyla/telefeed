@@ -85,6 +85,7 @@ class Channel(db.Model):
         default=False,
         server_default='0',
     )
+    template = db.Column(db.Text, nullable=False, server_default='')
 
     date_cursor = db.Column(db.DateTime, nullable=True)
 
