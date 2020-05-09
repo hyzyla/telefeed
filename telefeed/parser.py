@@ -1,3 +1,4 @@
+import logging
 import textwrap
 import time
 from dataclasses import dataclass
@@ -11,6 +12,8 @@ from feedparser import FeedParserDict as FeedDict
 from .models import Post, Feed
 
 DataDict = Dict[str, Any]
+
+logger = logging.getLogger(__name__)
 
 
 def get_text_from_html(html: str):
@@ -61,15 +64,14 @@ def get_posts(feed: Feed) -> List[Post]:
     try:
         _feed = feedparser.parse(feed.url)
     except Exception as exc:
-        print(exc)
+        logger.exception('Can not get feed url', exc_info=exc)
         return []
 
     for item in _feed.entries:
         try:
             content = parse_content(item)
-        except Exception as e:
-            print(item)
-            print(e)
+        except Exception as exc:
+            logger.exception('Can not parse feed', exc_info=exc)
             continue
 
         try:

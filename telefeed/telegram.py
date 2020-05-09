@@ -1,3 +1,4 @@
+import logging
 import os
 from typing import List, Generator, Set
 
@@ -8,6 +9,8 @@ from telefeed.models import Channel, Post
 
 
 bot = telegram.Bot(token=os.getenv('TELEGRAM_TOKEN'))
+
+logger = logging.getLogger(__name__)
 
 
 DEFAULT_TEMPLATE = """
@@ -26,7 +29,7 @@ def _send_message(channel: Channel, text: str) -> None:
             disable_web_page_preview=not channel.show_preview,
         )
     except Exception as exc:
-        print(exc)
+        logger.exception('Can not send message', exc_info=exc)
 
 
 def _post_markdown(channel: Channel, post: Post) -> str:
@@ -50,7 +53,7 @@ def send_posts(channel: Channel, posts: List[Post]) -> None:
         try:
             markdown = _post_markdown(channel, post)
         except Exception as exc:
-            print(exc)
+            logger.exception('Can not create post markdown', exc_info=exc)
             continue
 
         if len(markdown) >= 4096:

@@ -3,7 +3,6 @@ import os
 
 import celery
 import click
-from celery.utils.log import get_task_logger
 from flask.cli import AppGroup
 
 from . import app, db
@@ -14,7 +13,9 @@ from .queries import (
     delete_old_posts, insert_posts
 )
 
-logger = get_task_logger(__name__)
+logging.root.setLevel(logging.INFO)
+logger = logging.getLogger(__name__)
+
 FEED_PARSE_LIMIT = 1
 
 
@@ -29,8 +30,8 @@ celery.Task = ContextTask
 worker = celery.Celery('example')
 worker.conf.update(
     broker_url=os.environ['REDIS_URL'],
-    celery_result_backend=os.environ['REDIS_URL'],
-    celery_task_serializer="json",
+    result_backend=os.environ['REDIS_URL'],
+    task_serializer="json",
     broker_pool_limit=0,
     redis_max_connections=0,
     task_ignore_result=True,
@@ -68,7 +69,7 @@ def parse_feeds(offset: int = 0):
 
 @worker.task
 def send_to_channels():
-    logger.info(f'Sending posts to channels')
+    logger.info('Sending posts to channels')
     channels = select_channels()
     for channel in channels:
         # Get new posts
@@ -100,7 +101,7 @@ tasks_group = AppGroup('tasks')
 @click.argument('args', nargs=-1)
 def run_async(func, args):
     name = f'telefeed.tasks.{func}'
-    worker.tasks[name](*args)
+    worker.tasks[name].delay(*args)
 
 
 app.cli.add_command(tasks_group)

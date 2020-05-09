@@ -17,6 +17,7 @@ services:
       SECURITY_REGISTERABLE: "False"
       SECURITY_SEND_REGISTER_EMAIL: "False"
 
+      REMAP_SIGTERM: SIGQUIT  # For correct celery reload
       REDIS_URL: redis://redis:6379/12
       BROKER_POOL_LIMIT: "0"
 
@@ -36,7 +37,7 @@ services:
     image: bot-worker
     volumes: ['.:/work']
     depends_on: ["db", "redis"]
-    entrypoint: watchmedo auto-restart --pattern=*.py --recursive -- celery worker --app=telefeed.tasks.worker
+    entrypoint: watchmedo auto-restart --pattern=*.py --recursive -- celery worker --app=telefeed.tasks.worker -E
 
   db:
     image: postgres
