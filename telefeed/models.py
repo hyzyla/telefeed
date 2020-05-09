@@ -48,6 +48,12 @@ class Post(db.Model):
     )
     feed = db.relationship('Feed')
 
+    @property
+    def summary(self):
+        summary = self.body
+        summary = summary.split('...')[0]
+        return summary.split('…')[0]
+
     def __repr__(self):
         return self.title
 
