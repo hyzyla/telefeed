@@ -1,6 +1,6 @@
  # TODO
  
  - [ ] Integrate Centry
- - [ ] Button: "run task now"
- - [ ] Send message to private channel
+ - [x] Button: "run task now"
+ - [x] Send message to private channel
  
