@@ -9,5 +9,5 @@ def run_task(name: str):
     validate_user_admin()
     if not name.startswith('telefeed.tasks'):
         raise abort(400)
-    tasks.worker.tasks[name]()
+    tasks.worker.tasks[name].delay()
     return name
