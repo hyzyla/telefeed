@@ -21,7 +21,6 @@ app.config['SECURITY_PASSWORD_SALT'] = os.environ['SECURITY_PASSWORD_SALT']
 app.config['SECURITY_REGISTERABLE'] = os.environ['SECURITY_REGISTERABLE']
 app.config['SECURITY_CONFIRMABLE'] = False
 app.config['SECURITY_SEND_REGISTER_EMAIL'] = False
-app.config['BROKER_POOL_LIMIT'] = os.environ['BROKER_POOL_LIMIT']
 
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
