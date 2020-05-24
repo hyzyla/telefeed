@@ -3,8 +3,8 @@
     <p>Here I'm going to display some data.</p>
     <ul>
     {% for task in tasks %}
-        <li>{{ task.name }}
-            <button onclick="onTaskClick('{{ task.name }}')">run</button>
+        <li>{{ task.actor_name }}
+            <button onclick="onTaskClick('{{ task.actor_name }}')">run</button>
         </li>
     {% endfor %}
     </ul>

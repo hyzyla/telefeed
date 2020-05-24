@@ -22,11 +22,9 @@ class TaskView(AdminView):
 
     @expose('/')
     def index(self):
-        _tasks = [
-            task
-            for task in tasks.worker.tasks.values()
-            if task.name.startswith('telefeed')
-        ]
+        actors = tasks.broker.actors
+        _tasks = list(actors.values())
+
         return self.render('admin/tasks.html', tasks=_tasks)
 
 

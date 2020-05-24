@@ -37,7 +37,7 @@ services:
     image: bot-worker
     volumes: ['.:/work']
     depends_on: ["db", "redis"]
-    entrypoint: watchmedo auto-restart --pattern=*.py --recursive -- celery worker --app=telefeed.tasks.worker -E
+    entrypoint: dramatiq --watch=telefeed telefeed.tasks
 
   db:
     image: postgres

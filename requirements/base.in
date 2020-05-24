@@ -1,11 +1,22 @@
+# web server
 Flask-Admin==1.5.6
 Flask-SQLAlchemy==2.4.1
 Flask-Security==3.0.0
+Flask-Migrate==2.5.3
 Flask==1.1.2
-alembic==1.4.2
-beautifulsoup4==4.8.2
-celery==4.4.2
-feedparser==5.2.1
 gunicorn==20.0.4
+
+# worker
+dramatiq[redis]==1.8.1
+flask-dramatiq==0.6.0
+
+# parsing
+beautifulsoup4==4.8.2
+feedparser==5.2.1
+
+# telegram
 python-telegram-bot==12.4.2
+
+# Storage
 redis==3.4.1
+psycopg2==2.8.5
