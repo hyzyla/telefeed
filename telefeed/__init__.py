@@ -24,7 +24,7 @@ app.config['SECURITY_SEND_REGISTER_EMAIL'] = False
 
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
-redis = Redis.from_url(app.config['REDIS_URL'],  max_connections=9)
+redis = Redis.from_url(app.config['REDIS_URL'])
 
 from . import models
 from . import admin

@@ -101,10 +101,14 @@ def send_to_channels():
     logger.info("Sending posts to channels")
     channels = select_channels()
     for channel in channels:
+        logger.info(f'Sending post to {channel.name}')
+
         # Get new posts
         posts = select_pending_posts(channel.id)
         if not posts:
             continue
+
+        logger.info(f'Selected {len(posts)} posts for {channel.name}')
 
         # actual sent messages to telegram
         telegram.send_posts(channel, posts)
