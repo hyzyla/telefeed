@@ -25,7 +25,7 @@ app.config['BROKER_POOL_LIMIT'] = os.environ['BROKER_POOL_LIMIT']
 
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
-redis = Redis.from_url(app.config['REDIS_URL'],  max_connections=18)
+redis = Redis.from_url(app.config['REDIS_URL'],  max_connections=9)
 
 from . import models
 from . import admin
