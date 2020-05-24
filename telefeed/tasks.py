@@ -122,6 +122,7 @@ def send_to_channels():
 
 @dramatiq.actor
 def cleanup_posts():
+    logging.info('Cleanup old posts')
     delete_old_posts()
 
 
