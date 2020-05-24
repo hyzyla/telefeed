@@ -1,3 +1,3 @@
 release: flask db upgrade
 web: gunicorn app:app
-worker: dramatiq telefeed.tasks
+worker: dramatiq --processes 1 --threads 8 telefeed.tasks
