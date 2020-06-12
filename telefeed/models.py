@@ -1,6 +1,7 @@
 from flask_security import RoleMixin, UserMixin
 
 from . import db
+from .enums import PostStatus
 
 
 class UserRoles(db.Model):
@@ -41,6 +42,16 @@ class Post(db.Model):
     body = db.Column(db.Text, nullable=False)
     link = db.Column(db.Text, nullable=False, unique=True)
     date = db.Column(db.DateTime, nullable=False)
+    status = db.Column(
+        db.Enum(
+            PostStatus,
+            native_enum=False,
+            create_constraint=False,
+            length=16,
+        ),
+        nullable=False,
+        default=PostStatus.new,
+    )
     feed_id = db.Column(
         db.Integer,
         db.ForeignKey('feeds.id', ondelete='CASCADE'),
@@ -64,7 +75,12 @@ class Feed(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.Text, nullable=False)
     url = db.Column(db.Text, nullable=False)
-
+    posts_counts = db.Column(
+        db.Integer,
+        default=0,
+        server_default='0',
+        nullable=False,
+    )
     date_cursor = db.Column(db.DateTime, nullable=True)
 
     def __repr__(self):

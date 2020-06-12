@@ -9,6 +9,7 @@ import feedparser
 from bs4 import BeautifulSoup
 from feedparser import FeedParserDict as FeedDict
 
+from .enums import PostStatus
 from .models import Post, Feed
 
 DataDict = Dict[str, Any]
@@ -85,4 +86,5 @@ def get_posts(feed: Feed) -> List[Post]:
             link=item.link,
             date=date,
             feed=feed,
+            status=PostStatus.new,
         )

@@ -16,6 +16,7 @@ from .queries import (
     select_pending_posts,
     delete_old_posts,
     insert_posts,
+    update_feeds_counts,
 )
 
 
@@ -73,7 +74,9 @@ def parse_feeds(offset: int = 0):
     feeds = select_feeds(offset, limit=FEED_PARSE_LIMIT)
 
     if not feeds:
-        return send_to_channels()
+        logger.info('Parsing finished, 1 minute delay')
+        # Send to channels after one minute delay
+        return send_to_channels.send_with_options(delay=60000)
 
     # Run job again with increased offset
     parse_feeds.send(offset + 1)
@@ -115,6 +118,7 @@ def send_to_channels():
 
         # Update date cursor
         channel.date_cursor = max(post.date for post in posts)
+        update_feeds_counts(posts)
         db.session.commit()
 
     cleanup_posts()
