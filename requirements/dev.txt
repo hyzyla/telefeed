@@ -40,7 +40,7 @@ click==7.0
     #   -r base.txt
     #   black
     #   flask
-cryptography==2.8
+cryptography==3.3.2
     # via
     #   -r base.txt
     #   python-telegram-bot
