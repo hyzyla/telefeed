@@ -29,6 +29,7 @@ class TaskView(AdminView):
 
 
 class PostModelView(AdminModelView):
+    column_default_sort = ('date', True)
     column_searchable_list = ('title', 'body', 'link')
 
 
