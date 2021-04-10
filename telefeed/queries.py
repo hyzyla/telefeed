@@ -88,7 +88,7 @@ def update_feeds_counts(posts: List[Post]):
     mapping = defaultdict(lambda *args, **kwargs: 0)
     for post in posts:
         mapping[post.feed_id] += 1
-    print(mapping)
+
     for feed_id, count in mapping.items():
         (
             db.session
