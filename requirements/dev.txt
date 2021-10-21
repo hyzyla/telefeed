@@ -14,7 +14,7 @@ argh==0.26.2
     # via watchdog
 attrs==19.3.0
     # via black
-babel==2.8.0
+babel==2.9.1
     # via
     #   -r base.txt
     #   flask-babelex
@@ -59,6 +59,18 @@ feedparser==5.2.1
     # via -r base.txt
 flake8==3.7.9
     # via -r dev.in
+flask==1.1.2
+    # via
+    #   -r base.txt
+    #   flask-admin
+    #   flask-babelex
+    #   flask-login
+    #   flask-mail
+    #   flask-migrate
+    #   flask-principal
+    #   flask-security
+    #   flask-sqlalchemy
+    #   flask-wtf
 flask-admin==1.5.6
     # via -r base.txt
 flask-babelex==0.9.4
@@ -91,18 +103,6 @@ flask-wtf==0.14.3
     # via
     #   -r base.txt
     #   flask-security
-flask==1.1.2
-    # via
-    #   -r base.txt
-    #   flask-admin
-    #   flask-babelex
-    #   flask-login
-    #   flask-mail
-    #   flask-migrate
-    #   flask-principal
-    #   flask-security
-    #   flask-sqlalchemy
-    #   flask-wtf
 future==0.18.2
     # via
     #   -r base.txt
@@ -135,10 +135,10 @@ markupsafe==1.1.1
     #   mako
 mccabe==0.6.1
     # via flake8
-mypy-extensions==0.4.3
-    # via mypy
 mypy==0.770
     # via -r dev.in
+mypy-extensions==0.4.3
+    # via mypy
 passlib==1.7.2
     # via
     #   -r base.txt
@@ -213,12 +213,12 @@ typed-ast==1.4.1
     #   mypy
 typing-extensions==3.7.4.2
     # via mypy
-watchdog-gevent==0.1
-    # via dramatiq
 watchdog==0.8.3
     # via
     #   dramatiq
     #   watchdog-gevent
+watchdog-gevent==0.1
+    # via dramatiq
 werkzeug==1.0.0
     # via
     #   -r base.txt
